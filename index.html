@@ -1,61 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nike Store</title>
-
-    <link rel="stylesheet" href="css/style.css">
+    <title>Bots Tech Store</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
-<body>
+<body onload="loadCart()">
 
 <header>
-    <h1>NIKE</h1>
-
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="products.html">Products</a>
-        <a href="about.html">About</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+    <h1>Bots Tech Store</h1>
 </header>
 
-<section class="hero">
-    <h2>Just Do It</h2>
-    <p>Discover the latest Nike collections.</p>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="cart.html">Cart 🛒</a>
+</nav>
 
-    <a href="products.html" class="btn">Shop Now</a>
-</section>
+<input type="text" id="search" onkeyup="searchProducts()" placeholder="Search products...">
 
-<section class="featured">
+<h2>Products</h2>
 
-    <section class="card">
-        <img src="images/shoe1.jpg"
-             alt="Nike Air Max"
-             width="300"
-             height="200">
+<article class="product">
+    <img src="images/hp.jpg">
+    <h3>HP Laptop</h3>
+    <p>P8500</p>
+    <button onclick="addToCart('HP Laptop', 8500)">Add to Cart</button>
+</article>
 
-        <h3>Nike Air Max</h3>
-        <p>Comfort and performance combined.</p>
-    </section>
+<article class="product">
+    <img src="images/iphone.jpg">
+    <h3>iPhone 13</h3>
+    <p>P12000</p>
+    <button onclick="addToCart('iPhone 13', 12000)">Add to Cart</button>
+</article>
 
-    <section class="card">
-        <img src="images/shoe2.jpg"
-             alt="Nike Jordan"
-             width="300"
-             height="200">
-
-        <h3>Air Jordan</h3>
-        <p>Style for athletes and sneaker lovers.</p>
-    </div>
-
-</section>
-
-<footer>
-    <p>© 2025 Nike Website</p>
-</footer>
+<article class="product">
+    <img src="images/sony.jpg">
+    <h3>Sony Headphones</h3>
+    <p>P3200</p>
+    <button onclick="addToCart('Sony Headphones', 3200)">Add to Cart</button>
+</article>
 
 </body>
 </html>
