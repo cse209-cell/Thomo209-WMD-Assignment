@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Cart</title>
+    <title>Cart - Bots Tech Store</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
@@ -9,23 +9,30 @@
 <body onload="loadCart()">
 
 <header>
-    <h1>Your Cart</h1>
+    <h1>Your Shopping Cart 🛒</h1>
 </header>
 
 <nav>
     <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="cart.html">Cart</a>
 </nav>
 
-<section class="section">
-    <h2>Items in Cart</h2>
-    <section id="cartItems"></section>
+<section class="cart">
 
-    <h3 id="total"></h3>
+    <h2>Cart Items</h2>
+
+    <h id="cart-items"></h>
+
+    <h3 id="total">Total: P0</h3>
 
     <a href="checkout.html">
         <button>Proceed to Checkout</button>
     </a>
+
 </section>
 
 </body>
 </html>
+
