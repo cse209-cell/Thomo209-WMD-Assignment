@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bots Tech Store</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body onload="loadCart()">
+
+<header>
+    <h1>Bots Tech Store</h1>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="cart.html">Cart 🛒</a>
+</nav>
+
+<input 
+    type="text" 
+    id="search" 
+    onkeyup="searchProducts()" 
+    placeholder="Search products..."
+>
+
+<h2>Products</h2>
+
+<section class="category">
+    <h2>Laptops 💻</h2>
+
+    <section class="product">
+        <img src="images/hp-pavilion.jpg" alt="HP Pavilion">
+        <h3>HP Pavilion</h3>
+        <p>P8500</p>
+        <button onclick="addToCart('HP Pavilion', 8500)">
+            Add to Cart
+        </button>
+    </section>
+
+    <section class="product">
+        <img src="images/hp-envy.jpg" alt="HP Envy">
+        <h3>HP Envy</h3>
+        <p>P9800</p>
+        <button onclick="addToCart('HP Envy', 9800)">
+            Add to Cart
+        </button>
+    </section>
+
+    <article class="product">
+        <img src="images/dell-inspiron.jpg" alt="Dell Inspiron">
+        <h3>Dell Inspiron</h3>
+        <p>P9500</p>
+        <button onclick="addToCart('Dell Inspiron', 9500)">
+            Add to Cart
+        </button>
+    </article>
+
+    <article class="product">
+        <img src="images/dell-xps.jpg" alt="Dell XPS">
+        <h3>Dell XPS</h3>
+        <p>P13500</p>
+        <button onclick="addToCart('Dell XPS', 13500)">
+            Add to Cart
+        </button>
+    </article>
+</section>
+
+<section class="category">
+    <h2>Phones 📱</h2>
+
+    <article class="product">
+        <img src="images/samsung-s24.jpg" alt="Samsung Galaxy S24">
+        <h3>Samsung Galaxy S24</h3>
+        <p>P14500</p>
+        <button onclick="addToCart('Samsung Galaxy S24', 14500)">
+            Add to Cart
+        </button>
+    </article>
+
+    <article class="product">
+        <img src="images/samsung-a54.jpg" alt="Samsung Galaxy A54">
+        <h3>Samsung Galaxy A54</h3>
+        <p>P7200</p>
+        <button onclick="addToCart('Samsung Galaxy A54', 7200)">
+            Add to Cart
+        </button>
+    </article>
+
+    <section class="product">
+        <img src="images/iphone13.jpg" alt="iPhone 13">
+        <h3>iPhone 13</h3>
+        <p>P12000</p>
+        <button onclick="addToCart('iPhone 13', 12000)">
+            Add to Cart
+        </button>
+    </section>
+
+    <section class="product">
+        <img src="images/iphone14.jpg" alt="iPhone 14">
+        <h3>iPhone 14</h3>
+        <p>P14500</p>
+        <button onclick="addToCart('iPhone 14', 14500)">
+            Add to Cart
+        </button>
+    </section>
+</section>
+
+<section class="category">
+    <h2>Gaming Accessories 🎮</h2>
+
+    <section class="product">
+        <img src="images/ps5-standard.jpg" alt="PS5 Standard">
+        <h3>PS5 Standard Edition</h3>
+        <p>P9500</p>
+        <button onclick="addToCart('PS5 Standard Edition', 9500)">
+            Add to Cart
+        </button>
+    </section>
+
+    <section class="product">
+        <img src="images/ps5-slim.jpg" alt="PS5 Slim">
+        <h3>PS5 Slim</h3>
+        <p>P10500</p>
+        <button onclick="addToCart('PS5 Slim', 10500)">
+            Add to Cart
+        </button>
+    </section>
+
+    <section class="product">
+        <img src="images/keyboard-rgb.jpg" alt="RGB Gaming Keyboard">
+        <h3>RGB Gaming Keyboard</h3>
+        <p>P1800</p>
+        <button onclick="addToCart('RGB Gaming Keyboard', 1800)">
+            Add to Cart
+        </button>
+    </section>
+
+    <section class="product">
+        <img src="images/mechanical-keyboard.jpg" alt="Mechanical Keyboard">
+        <h3>Mechanical Keyboard</h3>
+        <p>P2500</p>
+        <button onclick="addToCart('Mechanical Keyboard', 2500)">
+            Add to Cart
+        </button>
+    </section>
+</section>
+
+<section class="category">
+    <h2>Headphones 🎧</h2>
+
+    <section class="product">
+        <img src="images/sony-wh1000xm5.jpg" alt="Sony WH-1000XM5">
+        <h3>Sony WH-1000XM5</h3>
+        <p>P4200</p>
+        <button onclick="addToCart('Sony WH-1000XM5', 4200)">
+            Add to Cart
+        </button>
+    </section>
+
+    <section class="product">
+        <img src="images/sony-xb910n.jpg" alt="Sony XB910N">
+        <h3>Sony XB910N</h3>
+        <p>P3100</p>
+        <button onclick="addToCart('Sony XB910N', 3100)">
+            Add to Cart
+        </button>
+    </section>
+
+    <section class="product">
+        <img src="images/jbl-tune760.jpg" alt="JBL Tune 760NC">
+        <h3>JBL Tune 760NC</h3>
+        <p>P2500</p>
+        <button onclick="addToCart('JBL Tune 760NC', 2500)">
+            Add to Cart
+        </button>
+    </section>
+
+    <section class="product">
+        <img src="images/jbl-live660.jpg" alt="JBL Live 660NC">
+        <h3>JBL Live 660NC</h3>
+        <p>P3400</p>
+        <button onclick="addToCart('JBL Live 660NC', 3400)">
+            Add to Cart
+        </button>
+    </section>
+</section>
+
+</body>
+</html>
