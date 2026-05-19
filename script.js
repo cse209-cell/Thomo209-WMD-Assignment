@@ -1,41 +1,61 @@
-let cart = [];
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-function addToCart(name, price) {
-    cart.push({ name, price });
-    alert(name + " added to cart!");
-    updateCart();
-}
+function addToCart(product, price) {
 
-function updateCart() {
+    cart.push({
+        product: product,
+        price: price
+    });
+
     localStorage.setItem("cart", JSON.stringify(cart));
+
+    alert(product + " added to cart!");
 }
 
 function loadCart() {
-    let storedCart = JSON.parse(localStorage.getItem("cart")) || [];
-    let cartList = document.getElementById("cartItems");
 
-    if (!cartList) return;
+    let cartItems = document.getElementById("cart-items");
+    let total = document.getElementById("total");
 
-    cartList.innerHTML = "";
-    let total = 0;
+    if (!cartItems) {
+        return;
+    }
 
-    storedCart.forEach(item => {
-        total += item.price;
+    cartItems.innerHTML = "";
 
-        cartList.innerHTML += `
-            <p>${item.name} - P${item.price}</p>
-        `;
+    let totalPrice = 0;
+
+    cart.forEach(function(item) {
+
+        let li = document.createElement("li");
+
+        li.textContent = item.product + " - P" + item.price;
+
+        cartItems.appendChild(li);
+
+        totalPrice += item.price;
     });
 
-    document.getElementById("total").innerText = "Total: P" + total;
+    total.textContent = "Total: P" + totalPrice;
 }
 
 function searchProducts() {
-    let input = document.getElementById("search").value.toLowerCase();
-    let products = document.getElementsByClassName("product");
 
-    for (let i = 0; i < products.length; i++) {
-        let name = products[i].innerText.toLowerCase();
-        products[i].style.display = name.includes(input) ? "block" : "none";
-    }
+    let input = document.getElementById("search").value.toLowerCase();
+
+    let products = document.querySelectorAll(".product");
+
+    products.forEach(function(product) {
+
+        let text = product.innerText.toLowerCase();
+
+        if (text.includes(input)) {
+            product.style.display = "block";
+        }
+
+        else {
+            product.style.display = "none";
+        }
+    });
 }
+   
